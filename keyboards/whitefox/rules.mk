@@ -59,7 +59,7 @@ DFU_ARGS = -d 1c11:b007
 # Build Options
 #   comment out to disable the options.
 #
-BOOTMAGIC_ENABLE = yes	# Virtual DIP switch configuration
+BOOTMAGIC_ENABLE = full	# Virtual DIP switch configuration
 ## (Note that for BOOTMAGIC on Teensy LC you have to use a custom .ld script.)
 MOUSEKEY_ENABLE = yes	# Mouse keys
 EXTRAKEY_ENABLE = yes	# Audio control and System control
@@ -74,3 +74,5 @@ VISUALIZER_ENABLE = yes
 LED_DRIVER = is31fl3731c
 LED_WIDTH = 16
 LED_HEIGHT = 5
+
+TAP_DANCE_ENABLE=yes
