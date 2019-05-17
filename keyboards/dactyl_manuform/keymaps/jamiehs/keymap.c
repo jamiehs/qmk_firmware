@@ -63,3 +63,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,        _______
   ),
 };
+
+
+void matrix_init_user(void) { // Runs boot tasks for keyboard
+    rgblight_enable();
+    rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
+    rgblight_sethsv(282,200,127);
+};
+
+uint32_t layer_state_set_user(uint32_t state) {
+    switch (biton32(state)) {
+      case _FN:
+        rgblight_sethsv_noeeprom(111,255,127);
+        break;
+      case _QWERTY:
+        rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
+        rgblight_sethsv_noeeprom(282,200,127);
+        break;
+    }
+  return state;
+}
