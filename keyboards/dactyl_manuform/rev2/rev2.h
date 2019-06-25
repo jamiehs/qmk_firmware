@@ -1,4 +1,4 @@
-#pragma once
+#include "dactyl_manuform.h"
 
 #include "quantum.h"
 
@@ -25,8 +25,8 @@
 		{ l21, l22, l23, l24, l25, l26, l27 }, \
 		{ l31, l32, l33, l34, l35, l36, l37 }, \
 		{ l41, l42, l43, l44, l45, l46, l47 }, \
-		{ KC_NO, KC_NO, KC_NO, l54, l55, l56, l57 }, \
-		{ KC_NO, KC_NO, KC_NO, l64, l65, l66, l67 }, \
+		{ KC_NO, KC_NO, l53, l54, l55, l56, l57 }, \
+		{ KC_NO, KC_NO, l63, l64, l65, l66, l67 }, \
 		{ r11, r12, r13, r14, r15, r16, r17 }, \
 		{ r21, r22, r23, r24, r25, r26, r27 }, \
 		{ r31, r32, r33, r34, r35, r36, r37 }, \
@@ -34,7 +34,6 @@
 		{ r51, r52, r53, r54, KC_NO, KC_NO, KC_NO }, \
 		{ r61, r62, r63, r64, KC_NO, KC_NO, KC_NO } \
 	}
-
 
 #define KEYMAP_5x6( \
 		l11, l12, l13, l14, l15, l16, \
