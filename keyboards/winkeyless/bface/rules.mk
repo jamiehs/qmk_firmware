@@ -25,7 +25,7 @@ NO_SUSPEND_POWER_DOWN = yes
 F_CPU = 12000000
 
 # build options
-BOOTMAGIC_ENABLE = yes
+BOOTMAGIC_ENABLE = no
 MOUSEKEY_ENABLE = yes
 EXTRAKEY_ENABLE = yes
 CONSOLE_ENABLE = no
@@ -40,9 +40,8 @@ OPT_DEFS = -DDEBUG_LEVEL=0
 OPT_DEFS += -DBOOTLOADER_SIZE=2048
 
 # custom matrix setup
-CUSTOM_MATRIX = yes
-SRC = matrix.c i2c.c backlight_ps2avrGB.c
+SRC = i2c_master.c
 
 # programming options
-PROGRAM_CMD = ./keyboards/winkeyless/bface/program .build/$(TARGET).hex
+PROGRAM_CMD = ./util/atmega32a_program.py $(TARGET).hex
 
