@@ -16,13 +16,13 @@
 
 /* key matrix pins */
 #define MATRIX_ROW_PINS { F7, F6, F5, F4, F1, F0, D2, D3 }
-#define MATRIX_COL_PINS { D6, B7, B6, B5, D7, C6, D0, D1 }
+#define MATRIX_COL_PINS { D1, D0, C6, D7, B5, B6, B7, D6 }
 #define UNUSED_PINS
 
 #define CATERINA_BOOTLOADER
 
 /* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION ROW2COL
+#define DIODE_DIRECTION COL2ROW
 
 #define RGB_DI_PIN C7
 #define RGBLED_NUM 6
